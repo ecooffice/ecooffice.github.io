@@ -1,0 +1,655 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/AvenirNext.ttf');
+}
+
+
+* {
+  outline: none;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Header */
+
+.full-page {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.top-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  border-bottom: 1px solid #BEE38E;
+  background-color: rgba(0,0,0,.1);
+}
+
+.logo img {
+  display: flex;
+  width: 120px;
+  opacity: 0.75;
+}
+
+.lending-nav {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+}
+
+.main-nav ul,
+.lending-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+.main-nav ul li a {
+  padding: 20px 20px;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icons {
+  color: #BEE38E;
+  margin: 5px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;bottom: 0;left: 0;right: 0;
+  overflow: hidden;
+  background-image: url("img/2.jpg");
+  background-size: cover;
+  z-index: -10;
+}
+
+.bg-video {
+  width: 101%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/pattern.png);
+  background-color: rgba(0, 0, 0, .1);
+  z-index: 1
+}
+
+.main-title {
+  position: absolute;  
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 25vh;
+  text-align: center;
+  padding: 0 40px;  
+}
+
+.main-title h1 {
+  font-family: 'OpenSans-Bold';
+  font-size: 90px;
+  color: #fff;
+  margin: 20px;
+}
+
+.main-title h2 {
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+.lending-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 10px 40px;
+  background-color: #7fb636;
+  opacity: .85;
+}
+
+.lending-nav ul li a {
+  padding: 20px 10px;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Что такое «Зелёный офис» */
+
+
+.advantages {
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.advantages-title {
+  text-align: center;
+  font-size: 44px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 300; 
+  color: #7fb636; 
+  margin-top: 60px;
+}
+
+.fade1 {
+  margin-top: 22vh;
+}
+
+.fade1 .advantage {
+  height: 400px;
+}
+
+.advantage-content {
+  margin: auto;
+  width: 210px;  
+  padding: 0 35px 20px;
+  text-align: center;
+  border-radius: 28px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.17), 0 10px 10px rgba(0,0,0,0.15);
+}
+
+.advantage-content h3 {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;   
+}
+
+.advantage-content h3 p {
+  color: #000;
+  background: #fff;
+  mix-blend-mode: lighten;
+}
+
+.advantage-content i {
+  font-size:  72px;
+  margin: auto;
+  color: #000;
+  background: #fff;
+  mix-blend-mode: lighten;
+  width: 100%;
+  height: 100%;
+}
+
+.advantage .mixicon {
+  margin-bottom: 40px;
+}
+
+.advantage1 {
+  border-top: 1px solid orange;  
+}
+
+.advantage1 h3,
+.advantage1 .mixicon {
+  background-image: url("img/c1.png");
+  background-size: cover;
+}
+
+.advantage2 { 
+}
+
+.advantage2 h3,
+.advantage2 .mixicon {
+  background-image: url("img/c2.png");
+  background-size: cover;
+}
+
+.advantage3 {
+  border-top: 1px solid green;  
+}
+
+.advantage3 h3,
+.advantage3 .mixicon {
+  background-image: url("img/c3.png");
+  background-size: cover;
+}
+
+.advantage4 {
+  border-top: 1px solid #0066cc;  
+}
+
+.advantage4 h3,
+.advantage4 .mixicon {
+  background-image: url("img/c4.png");
+  background-size: cover;
+}
+
+.earth {
+  position: absolute;
+  top: 40vh; 
+  left: 0; right: 0;
+  height: 300px;
+  background-image: url("img/earth.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;  
+}
+
+/* Как сделать офис зелёным */
+
+.title-green {
+  font-size: 44px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 300; 
+  color: #7fb636;
+  padding: 60px 20px 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fade2 {
+  margin-top: 30px;
+}
+
+.instruction h3 {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 700; 
+  background-image: url("img/c3.png");
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.instruction h3 p {
+  font-size: 44px;
+  color: #000;
+  background: #fff;
+  mix-blend-mode: lighten;
+}
+
+.instruction h3 p.instruction-title {
+  color: #7fb636;
+}
+
+.fade2 div img {
+  margin: auto;
+  width: 360px;
+  height: 360px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.instruction-container {
+  position: relative;
+}
+
+.instruction-text {
+  position: absolute;
+  top: 0;left: 0;
+  width: 300px;
+  padding: 0 10px;
+  min-height: 70px;
+  font-size: 16px;
+  color: #444;
+  font-family: 'OpenSans';
+  font-weight: 300;
+}
+
+.instruction-text1 {
+  top: 0px;
+  left: calc(50vw - 560px);
+}
+
+.instruction-text2 {
+  top: 280px;
+  left: calc(50vw - 560px);
+}
+
+.instruction-text3 {
+  top: 0px;
+  left: calc(50vw + 135px);
+}
+
+.instruction-text4 {
+  top: 280px;
+  left: calc(50vw + 135px);
+}
+
+.instruction-text1:before,
+.instruction-text2:before,
+.instruction-text3:before,
+.instruction-text4:before {
+  content: "";
+  position: absolute;  
+  width: 60px;
+  height: 1px;
+  background-color: #444;
+}
+
+.instruction-text1:before {
+  left: 330px;
+  top: 35px;
+  transform-origin: 0 0;
+  transform: rotate(30deg);
+}
+
+.instruction-text2:before {
+  left: 330px;
+  top: 25px;
+  transform-origin: 0 0;
+  transform: rotate(-30deg);
+}
+
+.instruction-text3:before {
+  left: -70px;
+  top: 35px;
+  transform-origin: right 0;
+  transform: rotate(-30deg);
+}
+
+.instruction-text4:before {
+  left: -70px;
+  top: 25px;
+  transform-origin: right 0;
+  transform: rotate(30deg);
+}
+
+
+/* Команда */
+
+.main-content { 
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+.person {
+  min-height: 500px;
+  background-color: #fff;
+  border: 1px solid #8CC63F; 
+  margin: 7px;
+}
+
+.slick-center {
+}
+
+.person-photo {
+  width: 100%;
+}
+
+.person-name {
+  margin-left: 40px;
+  font-family: 'OpenSans-Bold';
+  font-size: 24px;
+  color: #7fb636;
+}
+
+.person blockquote {
+  font-size: 18px;
+  min-height: 100px;
+}
+
+.person-social {
+  text-align: center;
+}
+
+.social-icons {
+  color: #7fb636;
+  opacity: 0.75;
+  font-size: 24px;
+  margin: 5px;
+  margin-bottom: 20px;
+}
+
+/* Деятельность */
+
+.action {
+  padding: 20px 40px;
+  margin-bottom: 100px;
+}
+
+.action .title-green {
+}
+
+.action-point {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.action-point:last-child {
+  margin-bottom: 0;
+}
+
+video {
+  width: 480px;
+  height: 268px;
+  margin: 18px 40px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.air video,
+.water video,
+.nature video {
+  height: 270px;
+}
+
+.description {
+  box-sizing: border-box;
+  width: 49%;
+  padding: 0px 40px;
+}
+
+.description h3 {
+  margin: 0;
+  text-align: left;
+  font-size: 32px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;  
+  color: #7fb636;
+}
+
+.description h4 {
+  position: relative;
+  padding: 0 10px;
+  margin: 0 0 0 20px;
+  color: #444; 
+  background-color: #fff;
+  font-family: 'OpenSans';
+  font-weight: 300; 
+  font-size: 24px;
+}
+
+.description h4:before {
+  content: "\f0ac";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #7fb636;
+  font-size: 18px;
+  position: absolute;
+  top: 7px;
+  left: -20px;
+}
+
+.description-text {
+  font-size: 18px;
+  color: #444;
+}
+
+.description-text strong {
+  font-weight: normal;
+}
+
+/* Проекты */
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.project-video {
+  margin-top: 60px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-video video {   
+  width: 236px;
+  height: 236px;
+  object-fit: cover;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #8CC63F; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.project-icon i {
+  font-size: 36px;
+  color: #7fb636;
+  transition: 1s;
+}
+
+.project-line {
+  margin: 0 auto;
+  width: 2px;
+  height: 100%;
+  min-height: 90px;
+  background-color: #8CC63F;
+}
+
+.project-content {
+  margin-top: 60px;
+  width: 45%;
+}
+
+.project-title {
+  font-size: 32px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+  margin: 20px auto;
+  text-align: center;
+  color: #7fb636;
+}
+
+.project-text {
+  margin: 20px 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.project-text span {
+  display: block;
+  font-size: 32px;
+  font-family: 'OpenSans-Light';
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px; 
+}
+
+/* Контакты */
+
+.contacts {
+  padding: 20px 40px;
+}
+
+.contacts p {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.title-contacts {
+  font-size: 44px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.names {
+  display: flex;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.title-green {
+  margin: 0 auto;
+}
+
+.name {
+  box-sizing: border-box;
+  width: 50%;
+  height: 40px;
+  padding: 5px 15px;
+  border: 1px solid #eee; 
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.text {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 5px 15px;
+  border: 1px solid #eee; 
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.textaera {
+  height: 240px;
+  outline: none;
+}

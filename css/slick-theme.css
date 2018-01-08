@@ -1,0 +1,563 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+  background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+  font-size: 20px;
+  color: #fff;
+  line-height: 0;
+
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+
+  display: block;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  cursor: pointer;
+  border: none;
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+  opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-size: 32px;
+  opacity: .75;
+  text-align: center;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+  left: 20px;
+}
+[dir='rtl'] .slick-prev
+{
+  right: 5px;
+  left: auto;
+}
+.slick-prev:before
+{
+  content: '\f0a8';
+}
+[dir='rtl'] .slick-prev:before
+{
+  content: '→';
+}
+
+.slick-next
+{
+  right: 20px;
+}
+[dir='rtl'] .slick-next
+{
+  right: auto;
+  left: 5px;
+}
+.slick-next:before
+{
+  content: '\f0a9';
+}
+[dir='rtl'] .slick-next:before
+{
+  content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+  margin-bottom: 30px;
+}
+
+.slick-dots
+{
+  position: absolute;
+  bottom: -40px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+
+.slick-dots li
+{
+  position: relative;
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.slick-dots li button
+
+{
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 2px solid #BEE38E;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+  opacity: 1;
+}
+
+.slick-dots li button:before
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '';
+  text-align: center;
+
+  opacity: .25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+  opacity: .75;
+  color: black;
+  background-color: #BEE38E;
+  border-radius: 50%;
+}
+
+/*  .fade1 dots */
+
+.fade1 .slick-dotted.slick-slider
+{
+  margin-bottom: 30px;
+}
+
+.fade1 .slick-dots
+{
+  position: absolute;
+  bottom: -40px;
+  top: -22vh;
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;  
+}
+
+.fade1 .slick-dots li
+
+{  
+  position: relative;
+  display: inline-block;
+
+  width: 150px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+
+  cursor: pointer;
+  border-top: 60px solid #fff;
+}
+
+.fade1 .slick-dots li:nth-child(1)
+{
+  position: relative;
+  display: none;
+}
+
+.fade1 .slick-dots li button
+
+{  
+  display: block;
+
+  width: 150px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.fade1 .slick-dots li:nth-child(1) button
+
+{
+  display: none; 
+}
+
+.fade1 .slick-dots li button:before
+{
+  position: absolute;
+  left: 0; top: -60px;
+  height: 75px;
+  width: 150px;
+  display: block;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fade1 .slick-dots li:nth-child(1) button:before
+{
+  display: none;
+}
+
+.fade1 .slick-dots li:nth-child(2) button:before
+{
+  content: "click me";
+  font-size: 14px;
+  font-family: 'OpenSans';
+  text-align: center;
+  color: #444;
+  opacity: 1;
+  background: url("../img/svg/plus.svg") no-repeat 63px 20px / 24px, url("../img/c1.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(3) button:before
+{
+  opacity: 1;
+  background: url("../img/svg/plus.svg") no-repeat 63px 20px / 24px, url("../img/c2.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(4) button:before
+{
+  opacity: 1;
+  background: url("../img/svg/plus.svg") no-repeat 63px 20px / 24px, url("../img/c3.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(5) button:before
+{
+  opacity: 1;
+  background: url("../img/svg/plus.svg") no-repeat 63px 20px / 24px, url("../img/c4.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(1).slick-active button:before
+{
+  display: none;
+}
+
+.fade1 .slick-dots li:nth-child(2).slick-active button:before
+{
+  content: "";
+  background: url("../img/svg/downarrow.svg") no-repeat 58px 20px / 34px, url("../img/c1.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(3).slick-active button:before
+{
+  background: url("../img/svg/downarrow.svg") no-repeat 58px 20px / 34px, url("../img/c2.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(4).slick-active button:before
+{
+  background: url("../img/svg/downarrow.svg") no-repeat 58px 20px / 34px, url("../img/c3.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+.fade1 .slick-dots li:nth-child(5).slick-active button:before
+{
+  background: url("../img/svg/downarrow.svg") no-repeat 58px 20px / 34px, url("../img/c4.png") no-repeat 0px 60px / auto;
+  border: none;
+}
+
+
+/*  .fade2 dots */
+
+.fade2 .slick-dotted.slick-slider
+{
+  margin-bottom: 30px;
+}
+
+.fade2 .slick-dots
+{
+  position: absolute;
+
+ 
+}
+
+.fade2 .slick-dots li
+{
+  position: relative;
+  display: inline-block;
+
+  width: 80px;
+  height: 80px;
+  margin: 0 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.fade2 .slick-dots li button
+
+{
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+}
+
+.fade2 .slick-dots li button:before
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 80px;
+}
+
+.fade2 .slick-dots li.slick-active button:before
+{
+  border: none;
+}
+
+.fade2 .slick-dotted.slick-slider
+{
+  margin-bottom: 30px;
+}
+
+.fade2 .slick-dots
+{
+  position: absolute;
+  bottom: -130px;
+}
+
+.fade2 .slick-dots li
+
+{  
+  position: relative;
+  display: inline-block;
+
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.fade2 .slick-dots li:nth-child(1)
+{
+  position: relative;
+  display: none;
+  width: 0;
+}
+
+.fade2 .slick-dots li button
+
+{  
+  display: block;
+
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.fade2 .slick-dots li:nth-child(1) button
+
+{
+  display: none; 
+  width: 0;
+  margin: 0;
+}
+
+.fade2 .slick-dots li button:before
+{
+  display: block;
+  border: none;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.fade2 .slick-dots li:nth-child(1) button:before
+{
+  display: none;
+  width: 0;
+}
+
+.fade2 .slick-dots li:nth-child(2) button:before
+{
+  content: "↓";
+  position: absolute;
+  top: -20px;
+  padding-top: 10px;
+  white-space: pre;
+  font-size: 20px;
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+  color: #444;
+  height: 100px;
+  opacity: 1;
+  background: url("../img/energy.png") no-repeat 0px 25px / 80px;
+}
+
+.fade2 .slick-dots li:nth-child(3) button:before
+{
+  opacity: 1;
+  background-image: url("../img/heating1.png");
+}
+
+.fade2 .slick-dots li:nth-child(4) button:before
+{
+  opacity: 1;
+  background-image: url("../img/water.png");
+}
+
+.fade2 .slick-dots li:nth-child(5) button:before
+{
+  opacity: 1;
+  background-image: url("../img/plastic.png");
+}
+
+.fade2 .slick-dots li:nth-child(6) button:before
+{
+  opacity: 1;
+  background-image: url("../img/energy1.png");
+}
+
+.fade2 .slick-dots li:nth-child(7) button:before
+{
+  opacity: 1;
+  background-image: url("../img/tree.png");
+}
+
+.fade2 .slick-dots li:nth-child(8) button:before
+{
+  opacity: 1;
+  background-image: url("../img/people.png");
+}
+
+.fade2 .slick-dots li:nth-child(1).slick-active button:before
+{
+  display: none;
+  width: 0;
+}
+
+.fade2 .slick-dots li.slick-active button:before {
+
+  background-color: transparent;
+}
+
+.fade2 .slick-dots li:nth-child(1) {
+  display: none;
+  width: 0;
+}
+
+
+.fade2 .slick-dots li.slick-active button:after
+{
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 23px;
+  display: block;
+  border-radius: 0;
+  width: 34px;
+  height: 34px;
+  background-image: url("../img/svg/downarrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.fade2 .slick-dots li.slick-active button:before {
+  content: "";
+}
