@@ -43,8 +43,6 @@ body {
   padding: 0;
   width: 100%;
   height: 100vh;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
 }
 
 .top-line {
@@ -146,6 +144,7 @@ body {
   justify-content: space-between;
   min-height: 40px;
   padding: 10px 40px;
+  margin: 0;
   background-color: #7fb636;
   opacity: .85;
 }
@@ -155,6 +154,7 @@ body {
   font-family: 'OpenSans', sans-serif;
   font-size: 20px;
   color: #fff;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -164,15 +164,6 @@ body {
 .advantages {
   position: relative;
   border: 2px solid transparent;
-}
-
-.advantages-title {
-  text-align: center;
-  font-size: 44px;
-  font-family: 'OpenSans-Bold';
-  font-weight: 300; 
-  color: #7fb636; 
-  margin-top: 60px;
 }
 
 .fade1 {
@@ -230,6 +221,7 @@ body {
 }
 
 .advantage2 { 
+  border-top: 1px solid red;
 }
 
 .advantage2 h3,
@@ -302,7 +294,11 @@ body {
   mix-blend-mode: lighten;
 }
 
-.instruction h3 p.instruction-title {
+.instruction h3.instruction-title {
+  background-image: none;
+}
+
+.instruction h3.instruction-title p {
   color: #7fb636;
 }
 
@@ -439,7 +435,7 @@ body {
 /* Деятельность */
 
 .action {
-  padding: 20px 40px;
+  padding: 0 40px 40px;
   margin-bottom: 100px;
 }
 
@@ -526,6 +522,11 @@ video {
   margin-bottom: 60px;
 }
 
+.project:last-child {
+  margin-top: -20px;
+  padding-bottom: 60px;
+}
+
 .project-video {
   margin-top: 60px;
   width: 45%;
@@ -600,14 +601,19 @@ video {
 
 /* Контакты */
 
-.contacts {
+.contacts .title-green {
+  padding-bottom: 0px;
+}
+
+.contact {
   padding: 20px 40px;
 }
 
-.contacts p {
+.contact p {
   width: 50%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .title-contacts {
@@ -618,9 +624,10 @@ video {
 
 .names {
   display: flex;
+  justify-content: space-between;
 }
 
-.form {
+.main-form {
   width: 50%;
   margin: 0 auto;
 }
@@ -629,27 +636,95 @@ video {
   margin: 0 auto;
 }
 
-.name {
+.main-form input {
   box-sizing: border-box;
-  width: 50%;
-  height: 40px;
   padding: 5px 15px;
-  border: 1px solid #eee; 
+  border: 1px solid #999; 
   margin-bottom: 10px;
-  outline: none;
+}
+
+.main-form input::-webkit-input-placeholder,
+.main-form textarea::-webkit-input-placeholder { 
+  font-size: 16px; 
+  color: #999;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.main-form input::-moz-placeholder,
+.main-form textarea::-webkit-input-placeholder { 
+  font-size: 16px; 
+  color: #999;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+} 
+
+.main-form input:-ms-input-placeholder,
+.main-form textarea::-webkit-input-placeholder { 
+  font-size: 16px; 
+  color: #999;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.main-form input:focus::-webkit-input-placeholder,
+.main-form textarea:focus::-webkit-input-placeholder {color: transparent}
+.main-form input:focus::-moz-placeholder,
+.main-form textarea:focus::-webkit-input-placeholder {color: transparent}
+.main-form input:focus:-ms-input-placeholder,
+.main-form textarea:focus::-webkit-input-placeholder {color: transparent}
+
+.name,
+.email {
+  width: calc(50% - 5px);
+  height: 40px;  
 }
 
 .text {
-  box-sizing: border-box;
   width: 100%;
   height: 40px;
-  padding: 5px 15px;
-  border: 1px solid #eee; 
-  margin-bottom: 10px;
-  outline: none;
 }
 
 .textaera {
+  box-sizing: border-box;
+  width: 100%;
   height: 240px;
-  outline: none;
+  border: 1px solid #999;
+  font-size: 18px; 
+  color: #444;
+  padding: 5px 15px;
+  border: 1px solid #999;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+  resize: none;
+}
+
+.send-btn {
+  width: 100%;
+  height: 70px;
+  line-height: 60px;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'OpenSanc-Bold', sans-serif;  
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+  user-select: none;
+  border-radius: 2px;
+  transition: all .3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.225);
+  color: #FFF;
+  background-color: #7fb636;
+}
+
+.send-btn:hover { 
+  text-decoration: none; 
+  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+  background-color: #8cc63f;
 }

@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
  <header>
  
- <div class="full-page">
+   <div class="full-page section">
    <!-- Главная навигация -->
 
    <div class="top-line">
@@ -38,13 +39,14 @@
    </div>
    
    <!-- Навигация по лендингу -->
-   <div class="lending-nav">
+   <div class="lending-nav" id="menu">
      <ul>
-       <li><a href="#">О проекте</a></li>
-       <li><a href="#">Команда</a></li>
-       <li><a href="#">Деятельность</a></li>
-       <li><a href="#">Результаты</a></li>
-       <li><a href="#">Контакты</a></li>
+       <li><a href="#about">О проекте</a></li>
+       <li><a href="#how">Как начать</a></li>
+       <li><a href="#team">Команда</a></li>
+       <li><a href="#action">Деятельность</a></li>
+       <li><a href="#results">Результаты</a></li>
+       <li><a href="#contacts">Контакты</a></li>
        <li><a href="#">Хочу помочь</a></li>
      </ul>
    </div>
@@ -54,10 +56,10 @@
  <main class="main-content">
  
    <!-- Что такое «Зелёный офис»   -->
-   <div class="full-page">
+   <div class="full-page section" id="about">
     <div class="earth"></div>
      
-     <h2 class="advantages-title">Зелёный офис это...</h2>
+     <h2 class="title-green">Зелёный офис это...</h2>
      <div class="advantages">
        <div class="fade1">
          <div class="advantage">
@@ -69,8 +71,8 @@
              <p class="mixicon"><i class="fa fa-envira"></i></p>            
              <p>существенное снижение расходов на содержание офиса</p>
            </div>           
-         </div>
-         
+         </div>         
+                 
          <div class="advantage">
            <div class="advantage-content advantage2">
              <h3><p>Забота</p></h3>
@@ -102,12 +104,12 @@
    
      
    <!-- Семь шагов к зелёному офису -->
-   <div class="full-page">     
+   <div class="full-page section" id="how">     
      <div class="fade2">
      
        <div class="instruction">
          <div class="instruction-envelope">
-           <h3><p class="instruction-title">Как сделать офис зелёным</p></h3>
+           <h3 class="instruction-title"><p>Как сделать офис зелёным</p></h3>
            <div class="instruction-container"> 
              <img src="img/battery.png" alt="envelope">                  
            </div>
@@ -211,7 +213,7 @@
   
    <!-- Команда -->
    
-   <div class="full-page">
+   <div class="full-page section" id="team">
      <h2 class="title-green">Кто мы</h2>
      <div class="multiple-items">   
              
@@ -280,13 +282,13 @@
    
    <!-- Деятельность -->
    
-   <div class="action">
+   <div class="action section" id="action">
      <h2 class="title-green">Чем мы занимаемся</h2>
      
      <div class="action-point air">
-       <video src="video/air1.mp4" class="action-video" autoplay preload="auto" loop></video>      
+       <video src="video/air1.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>      
        
-       <div class="description">
+       <div class="description wow fadeInRight">
          <h3>Раздельный сбор мусора</h3>
          <h4 class="action-title">Заботимся о чистоте воздуха</h4>
          <p class="description-text">Раздельный сбор мусора — это экономия сырья и ресурсов. А ещё это забота об экологии. На каждую тонну сжигаемых отходов требуется 5–6 тысяч кубических метров воздуха. Поэтому раздельный сбор мусора это чистый, не отравленный мусоросжигательными заводами воздух. Воздух, в котором будут летать птицы. Воздух, которым будут дышать наши дети.</p>
@@ -294,19 +296,19 @@
      </div>
      
      <div class="action-point tree">
-       <div class="description">
+       <div class="description wow fadeInLeft">
          <h3>Cобираем макулатуру</h3>
          <h4 class="action-title">Сохраняем деревья</h4>
          <p class="description-text">Небольшой офис, в котором работает 10 человек, за год вырабатывает не менее тонны бумажных отходов. Сдав их на переработку вы сохраните 10-15 деревьев, сэкономите 20 000 литров запасов воды и 1000 кВт электроэнергии, сможете уменьшить опасные для природной среды выбросы СО<sub>2</sub> на 1700 кг.</p>
        </div>
 
-       <video src="video/forest2.mp4" class="action-video" autoplay preload="auto" loop></video>       
+       <video src="video/forest2.mp4" class="action-video wow fadeInRight" autoplay preload="auto" loop></video>       
      </div>
      
      <div class="action-point animals">
-       <video src="video/animal4.mp4" class="action-video" autoplay preload="auto" loop></video>      
+       <video src="video/animal4.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>      
        
-       <div class="description">
+       <div class="description wow fadeInRight">
          <h3>Cобираем батарейки</h3>
          <h4 class="action-title">Спасаем зверей и птиц</h4>
          <p class="description-text">Пальчиковые батарейки, аккумуляторы, офисная техника относятся к категории опасных отходов. Их нельзя выбрасывать вместе с остальным мусором. Всего одна батарейка может загрязнить 20 м<sup>2</sup> земли. Это территория обитания двух деревьев, двух кротов и одного ежа. Тяжелые металы, которые содержатся в батарейках, приносят вред здоровью всех живых существ, в том числе и человека. 
@@ -315,19 +317,19 @@
      </div>
      
      <div class="action-point water">
-       <div class="description">
+       <div class="description wow fadeInLeft">
          <h3>Собираем пластик</h3>
          <h4 class="action-title">Охраняем воду и почву</h4>
          <p class="description-text">Считается, что время разложения пластмасс в природе составляет около 200 лет. Но это только предположение: ещё ни одно из созданных человеком изделий из пластика не разложилось в природе. Собирая и отправляя на переработку пластик мы не допускаем его попадания в природу. Благодаря этому пластиковые отходы принесут пользу, станут основой нужных и полезных вещей, вместо того, чтобы загрязнять землю и водоёмы</p>
        </div>
        
-       <video src="video/water2.mp4" class="action-video" autoplay preload="auto" loop></video>       
+       <video src="video/water2.mp4" class="action-video wow fadeInRight" autoplay preload="auto" loop></video>       
      </div>
      
      <div class="action-point nature">
-       <video src="video/daisy.mp4" class="action-video" autoplay preload="auto" loop></video>       
+       <video src="video/daisy.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>       
        
-       <div class="description">
+       <div class="description wow fadeInRight">
         <h3>Проводим лекции</h3>
          <h4 class="action-title">Охраняем природу</h4>
          <p class="description-text"> Мы организовываем и проводим лекции и экологические мероприятия. Людям необходимо знать каким образом зелёный офис может сократить потребление воды, энергии, других ресурсов. Уменьшая количество отходов, осуществляя раздельный сбор мусора, собирая макулатуру, зелёный офис экономит сотни тысяч литров природной воды в год, сберегает чистый воздух, заботится о животных, сохраняет здоровье человека.</p>
@@ -336,11 +338,11 @@
    </div> <!-- action -->
    
    <!-- Результаты -->
-   
+   <div class="results section" id="results"> 
    <h2 class="title-green">Результаты</h2>
    <div class="projects"> 
      <div class="project air">
-       <div class="project-video">
+       <div class="project-video wow fadeInUp">
          <video src="video/air.mp4" autoplay preload="auto" loop></video>
        </div>
        
@@ -376,13 +378,13 @@
          <div class="project-line">
          </div>
        </div>
-       <div class="project-video">
+       <div class="project-video wow fadeInUp">
          <video src="video/treeleaves.mp4" autoplay preload="auto" loop></video>
        </div>       
      </div> <!-- tree -->
      
      <div class="project water">
-       <div class="project-video">
+       <div class="project-video wow fadeInUp">
          <video src="video/water3.mp4" autoplay preload="auto" loop></video>
        </div>
 
@@ -417,13 +419,13 @@
          <div class="project-line">
          </div>
        </div>
-       <div class="project-video">
+       <div class="project-video wow fadeInUp">
          <video src="video/animal1.mp4" autoplay preload="auto" loop></video>
        </div>       
      </div> <!-- ground -->
      
      <div class="project energy">
-       <div class="project-video">
+       <div class="project-video wow fadeInUp">
          <video src="video/windturbine.mp4" autoplay preload="auto" loop></video>
        </div>
 
@@ -457,34 +459,36 @@
      </div> <!-- end -->
      
    </div> <!-- projects -->
+   </div>
  </main> 
   
   <footer>
 
     <!-- Контакты -->
-
+    <div class="contacts full-page section" id="contacts">
     <h2 class="title-green">Контакты</h2>
-    <div class="contacts">
+    <div class="contact">
       <p>По всем вопросам пишите нам на e-mail mail@mail или заполните форму ниже</p>
       <div class="title-contacts">
         Напишите нам
       </div>
-      <form action="" method="post" autocomplete="off" class="form">
+      <form action="" method="post" autocomplete="off" class="main-form">
         <div class="names">
           <input name="" class="name" value="" placeholder="Имя" type="text">
-          <input name="" class="name" value="" placeholder="Е-mail" type="email">
+          <input name="" class="email" value="" placeholder="Е-mail" type="email">
         </div>
         <input name="" class="text" value="" placeholder="Тема" type="text">
-        <textarea rows="5" class="text  textaera">Сообщение</textarea>
-        <input name="" class="text" value="Отправить" placeholder="" type="submit">
+        <textarea rows="5" class="textaera" placeholder="Сообщение"></textarea>
+        <input name="" class="send-btn" value="Отправить" placeholder="" type="submit">
       </form>
-
-
+    </div>
     </div>
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.scrollify.js"></script>
   <script src="js/slick.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="script.js"></script>
   </body>
 </html>

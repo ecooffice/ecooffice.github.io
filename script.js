@@ -45,3 +45,30 @@ $(document).ready(function(){
     cssEase: 'linear'
   });
 });
+
+$(function() {
+  $.scrollify({
+    section : ".section",
+    easing: "easeOutExpo",
+    interstitialSection :  ".partsection" ,
+  });
+  
+  $("#menu").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       150,          // distance to the element when triggering the animation (default is 0)
+    mobile:      false,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init(); 
