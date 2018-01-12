@@ -35,8 +35,6 @@ body {
   color: #444;
 }
 
-/* Header */
-
 .full-page {
   position: relative;
   margin: 0;
@@ -90,11 +88,11 @@ body {
 
 .video-container {
   position: absolute;
-  top: 0;bottom: 0;left: 0;right: 0;
+  top: 0; bottom: 0; left: 0; right: 0;
   overflow: hidden;
   background-image: url("img/2.jpg");
   background-size: cover;
-  z-index: -10;
+  z-index: -1000; 
 }
 
 .bg-video {
@@ -113,17 +111,14 @@ body {
   width: 100%;
   background-image: url(img/pattern.png);
   background-color: rgba(0, 0, 0, .1);
-  z-index: 1
+  z-index: -99;
 }
 
 .main-title {
-  position: absolute;  
-  z-index: 2;
-  left: 0;
-  right: 0;
-  top: 25vh;
+  position: relative;
+  margin-top: 120px;
   text-align: center;
-  padding: 0 40px;  
+  padding: 0 40px; 
 }
 
 .main-title h1 {
@@ -135,7 +130,26 @@ body {
 
 .main-title h2 {
   color: #fff;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+}
+
+.donate-btn {
+  padding: 10px 25px;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  vertical-align: middle;
+  border: none;
+  user-select: none;
+  border-radius: 25px;
+  transition: all .3s ease-out;
+  background-color: orange;
+}
+
+.donate-btn-center {
+  left: 44vw;
+  
+  bottom: 40vh;
 }
 
 .lending-nav ul {
@@ -156,6 +170,27 @@ body {
   color: #fff;
   margin: 0;
   text-decoration: none;
+}
+
+.lending-nav ul li.donate-btn a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'OpenSanc-Bold', sans-serif;  
+  text-align: center;
+  transition: 0.5s;
+}
+
+.lending-nav ul li.donate-btn:hover { 
+  text-decoration: none; 
+  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.lending-nav ul li.donate-btn:hover a { 
+  color: orange;
+  transition: 0.5s;
 }
 
 /* Что такое «Зелёный офис» */
@@ -218,10 +253,6 @@ body {
 .advantage1 .mixicon {
   background-image: url("img/c1.png");
   background-size: cover;
-}
-
-.advantage2 { 
-  border-top: 1px solid red;
 }
 
 .advantage2 h3,
@@ -434,10 +465,6 @@ body {
 
 /* Деятельность */
 
-.action {
-  padding: 0 40px 40px;
-  margin-bottom: 100px;
-}
 
 .action .title-green {
 }
@@ -446,7 +473,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
+  padding: 40px;
 }
 
 .action-point:last-child {
@@ -514,25 +542,23 @@ video {
   font-weight: normal;
 }
 
-/* Проекты */
+/* Результаты */
 
 .project {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
-}
-
-.project:last-child {
-  margin-top: -20px;
+  padding-top: 20px;
   padding-bottom: 60px;
+  margin: 0;
 }
 
 .project-video {
-  margin-top: 60px;
+  margin-top: 80px;
   width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .project-video video {   
@@ -542,6 +568,7 @@ video {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  margin: 0;
 }
 
 .project-icon {
@@ -565,20 +592,24 @@ video {
   margin: 0 auto;
   width: 2px;
   height: 100%;
-  min-height: 90px;
+  min-height: 100px;
   background-color: #8CC63F;
 }
 
 .project-content {
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
   width: 45%;
+  padding: 0;
 }
 
 .project-title {
   font-size: 32px;
   font-family: 'OpenSans-Bold';
   font-weight: 700;
-  margin: 20px auto;
+  margin: 0 auto 20px;
   text-align: center;
   color: #7fb636;
 }
@@ -598,6 +629,7 @@ video {
   margin-bottom: 20px;
   margin-top: 20px; 
 }
+
 
 /* Контакты */
 
@@ -636,7 +668,8 @@ video {
   margin: 0 auto;
 }
 
-.main-form input {
+.main-form input,
+.donate-form input {
   box-sizing: border-box;
   padding: 5px 15px;
   border: 1px solid #999; 
@@ -644,6 +677,7 @@ video {
 }
 
 .main-form input::-webkit-input-placeholder,
+.donate-form input::-webkit-input-placeholder,
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
@@ -653,6 +687,7 @@ video {
 }
 
 .main-form input::-moz-placeholder,
+.donate-form input::-moz-placeholder,
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
@@ -662,6 +697,7 @@ video {
 } 
 
 .main-form input:-ms-input-placeholder,
+.donate-form input:-ms-input-placeholder,
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
@@ -671,10 +707,13 @@ video {
 }
 
 .main-form input:focus::-webkit-input-placeholder,
+.donate-form input:focus::-webkit-input-placeholder,
 .main-form textarea:focus::-webkit-input-placeholder {color: transparent}
 .main-form input:focus::-moz-placeholder,
+.donate-form input:focus::-moz-placeholder,
 .main-form textarea:focus::-webkit-input-placeholder {color: transparent}
 .main-form input:focus:-ms-input-placeholder,
+.donate-form input:focus:-ms-input-placeholder,
 .main-form textarea:focus::-webkit-input-placeholder {color: transparent}
 
 .name,
@@ -692,7 +731,6 @@ video {
   box-sizing: border-box;
   width: 100%;
   height: 240px;
-  border: 1px solid #999;
   font-size: 18px; 
   color: #444;
   padding: 5px 15px;
@@ -728,3 +766,334 @@ video {
   box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
   background-color: #8cc63f;
 }
+
+/* Footer */
+
+footer {
+  height: 60vh;
+  background-color: #261C11;
+  background-image: url("img/footage-bg.jpg");
+  background-size: cover;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+.footer-container { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.footer-logo img,
+.copyright {
+  width: 10vw;
+}
+
+.footer-social {
+  font-size: 24px;
+  text-align: center;
+}
+
+.footer-social i {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+  line-height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+/* Хочу помочь */
+
+.donate {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  color: #444;
+  z-index: 100;
+  background-color: #fff;
+  border-left: 2px solid #7fb636;
+  box-shadow: -2px 0 5px 0 rgba(0,0,0,0.225);
+  transition: 1s;
+}
+
+.donate:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 800px;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,.6);
+}
+
+.donate-close-btn {
+  position: absolute;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'OpenSanc-Light', sans-serif;  
+  text-align: center;
+  text-transform: uppercase;
+  color: #999;
+  padding: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.donate-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.donate-select {
+  height: 40px;
+  font-size: 18px; 
+  color: #444;
+  padding: 5px 15px;
+  border: 1px solid #999;
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+  width: 80%;
+  margin-bottom: 40px;    
+}
+
+.donate-amounts {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  width: 80%;
+  height: 40px;
+  border: 1px solid #999;
+  margin-bottom: 40px;
+}
+
+.donate-amount  {
+  text-align: center;
+  line-height: 40px;
+
+  text-align: center;
+}
+
+.donate-amounts span {
+  height: 36px;
+  width: 1px;
+  background-color: #999;
+}
+
+.donate-names {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.donate-name {
+  width: calc(50% - 5px);
+  height: 40px; 
+}
+
+.donate-email {
+  width: 80%;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.donate-form-btn {
+  width: 80%;
+  height: 60px;
+  line-height: 50px;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'OpenSanc-Bold', sans-serif;  
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border: none;
+  user-select: none;
+  border-radius: 2px;
+  transition: all .3s ease-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.225);
+  color: #FFF;
+  background-color: #7fb636;
+  margin-top: 25px;
+}
+
+.donate-btn:hover { 
+  text-decoration: none; 
+  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+  background-color: #8cc63f;
+}
+
+/* Адаптивное меню */
+
+.menu-icon {
+  display: none;
+  width: 45px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+.menu-icon span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.menu-icon span:nth-child(2), .menu__icon span:nth-child(3) {
+  top: 13px;
+}
+
+.menu-icon span:nth-child(4) {
+  top: 26px;
+}
+
+.main-nav.open .menu-icon span:nth-child(1) {
+  top: 15px;
+  width: 0%;
+  left: 50%;
+}
+
+.main-nav.open .menu-icon span:nth-child(2) {
+  top: 15px;
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+
+.main-nav.open .menu-icon span:nth-child(3) {
+  top: 15px;
+  transform: rotate(-45deg);
+  transform-origin: center center;
+}
+
+.main-nav.open .menu-icon span:nth-child(4) {
+  top: 15px;
+  width: 0%;
+  left: 50%;
+}
+
+.main-nav.open ul {
+  opacity: 1;  
+}
+
+@media (max-width: 999px) {
+  
+  .menu-icon{
+    display: inline-block;
+  }
+
+  .main-nav ul {
+    position: fixed;
+    display: block;
+    top: 13px;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+  }
+
+  .main-nav ul li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+}
+
+/* Анимация появления и исчезновения блока Хочу помочь */
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(800px);
+    transform: translateX(800px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(800px);
+    -ms-transform: translateX(800px);
+    transform: translateX(800px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(800px);
+    transform: translateX(800px);
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(800px);
+    -ms-transform: translateX(800px);
+    transform: translateX(800px);
+  }
+}
+
