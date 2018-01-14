@@ -203,7 +203,7 @@ body {
   font-weight: 700;   
 }
 
-.advantage-content h3 p {
+.advantage-content h3 span {
   color: #000;
   background: #fff;
   mix-blend-mode: lighten;
@@ -296,7 +296,7 @@ body {
   margin-bottom: 40px;
 }
 
-.instruction h3 p {
+.instruction h3 span {
   font-size: 44px;
   color: #000;
   background: #fff;
@@ -307,7 +307,7 @@ body {
   background-image: none;
 }
 
-.instruction h3.instruction-title p {
+.instruction h3.instruction-title span {
   color: #7fb636;
 }
 
@@ -1409,8 +1409,8 @@ ol, ul {
   }
   
   .title-green,
-  h3.instruction-title p,
-  .instruction h3 p {
+  h3.instruction-title span,
+  .instruction h3 span {
     font-size: 32px;
   }
   
