@@ -300,7 +300,7 @@ body {
   margin-bottom: 40px;
 }
 
-.instruction h3 span {
+.instruction h3 p {
   font-size: 44px;
   color: #000;
   background: #fff;
@@ -311,7 +311,7 @@ body {
   background-image: none;
 }
 
-.instruction h3.instruction-title span {
+.instruction h3.instruction-title p {
   color: #7fb636;
 }
 
@@ -1413,8 +1413,8 @@ ol, ul {
   }
   
   .title-green,
-  h3.instruction-title span,
-  .instruction h3 span {
+  h3.instruction-title p,
+  .instruction h3 p {
     font-size: 32px;
   }
   
