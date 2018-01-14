@@ -30,17 +30,18 @@ menu.addEventListener("click", function() {
 
 donateBtn.addEventListener("click", function() {
   donate.style.display = "block";
-  donate.style.animation = "fadeInRight 1s ease-in-out";
+  donate.style.animation = "fade-InRight 1s ease-in-out";
 });
 
 donateCloseBtn.addEventListener("click", function() {
   setTimeout(function() {
     donate.style.display = "none";
   }, 1000);  
-  donate.style.animation = "fadeOutRight 1s ease-in-out";   
+  donate.style.animation = "fade-OutRight 1s ease-in-out";   
 });
 
-// Здесь три слайдера slick - 2, 3, 4 экраны лендинга
+// Здесь три слайдера - 2, 3, 4 экраны лендинга
+// плагин slick js https://github.com/kenwheeler/slick
 
 $(document).ready(function(){
   $('.multiple-items').slick({
@@ -51,7 +52,22 @@ $(document).ready(function(){
     centerMode: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    responsive: [{
+
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2
+      }
+
+    }, {
+
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+
+    }]
   });
   
   $('.fade1').slick({
@@ -73,43 +89,63 @@ $(document).ready(function(){
     fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    cssEase: 'linear'
+    cssEase: 'linear',   
+    
   });
 });
 
 
-// это просто плавный скрол до якоря по клику в меню
-// вроде бы как можно заменить свойством scroll-behavior: smooth; но тогда прокрутка будет хуже
-  
-$("#menu").on("click","a", function (event) {
-  event.preventDefault();
-  var id  = $(this).attr('href'),
-      top = $(id).offset().top;
-  $('body,html').animate({scrollTop: top}, 1500);
-});
+// поблочная прокрутка до якоря и боковая пагинация
+// плагин scrollify.js https://github.com/lukehaas/Scrollify
 
-
-// анимация при прокрутке плагин wow
-// в планах заменить его нативным кодом
-
-var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       150,          // distance to the element when triggering the animation (default is 0)
-    mobile:      false,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    scrollContainer: null // optional scroll container selector, otherwise use window
-  }
-);
-wow.init(); 
-
-// поблочная прокрутка до якоря
-
-$(document).ready(function(){
+$(function() {
   $.scrollify({
-    section : ".section",
+    section: ".panel",
     interstitialSection : ".partsection",
+    scrollbars: true,
+    before: function(i,panels) {
+
+      var ref = panels[i].attr("data-section-name");
+
+      $(".pagination .active").removeClass("active");
+   
+      $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+    },
+    afterRender:function() {
+      var pagination = "<ul class=\"pagination\">";
+      var activeClass = "";
+      $(".panel").each(function(i) {
+        activeClass = "";
+        if(i===0) {
+          activeClass = "active";
+        }
+        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+      });
+
+      pagination += "</ul>";
+
+      $(".home").append(pagination);
+      
+      // Смена цвета ссылок пагинации на первой странице
+      
+      $(".pagination").hover(function(){
+        if($(".pagination li:nth-child(1) a").hasClass("active")){
+          $(".pagination li a").css( "color", "#fff");
+        } else {
+          $(".pagination li a").css( "color", "#444");
+        }
+      });
+      
+
+      $(".pagination a").on("click",$.scrollify.move);
+      
+      // Переход к секции по клику по ссылке в меню
+      
+      $(".lending-nav li a").on("click",$.scrollify.move); 
+      
+      }
   });
 });
+
+
 

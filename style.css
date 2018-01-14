@@ -1,24 +1,3 @@
-@font-face {
-  font-family: 'OpenSans';
-  src: url('fonts/OpenSans.ttf');
-}
-
-@font-face {
-  font-family: 'OpenSans-Bold';
-  src: url('fonts/OpenSans-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'OpenSans-Light';
-  src: url('fonts/OpenSans-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Avenir';
-  src: url('fonts/AvenirNext.ttf');
-}
-
-
 * {
   outline: none;
 }
@@ -27,8 +6,8 @@ body {
   padding: 0;
   margin: 0 auto;
   width: 100%;
-  min-height: 100%;
-  font-family: 'OpenSans-Light', sans-serif;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   font-size: 18px;
   line-height: 1.5;
@@ -42,6 +21,8 @@ body {
   width: 100%;
   height: 100vh;
 }
+
+/* Header */
 
 .top-line {
   display: flex;
@@ -90,9 +71,10 @@ body {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   overflow: hidden;
+  background-color: #7fb636;
   background-image: url("img/2.jpg");
   background-size: cover;
-  z-index: -1000; 
+  z-index: -2; 
 }
 
 .bg-video {
@@ -111,31 +93,38 @@ body {
   width: 100%;
   background-image: url(img/pattern.png);
   background-color: rgba(0, 0, 0, .1);
-  z-index: -99;
+  z-index: -1;
 }
 
 .main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
   position: relative;
-  margin-top: 120px;
   text-align: center;
   padding: 0 40px; 
 }
 
 .main-title h1 {
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 90px;
   color: #fff;
   margin: 20px;
 }
 
 .main-title h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
   color: #fff;
   margin-bottom: 60px;
 }
 
 .donate-btn {
   padding: 10px 25px;
-  font-family: 'OpenSans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   color: #fff;
   vertical-align: middle;
@@ -144,12 +133,15 @@ body {
   border-radius: 25px;
   transition: all .3s ease-out;
   background-color: orange;
+  margin-bottom: 80px;
 }
 
-.donate-btn-center {
-  left: 44vw;
-  
-  bottom: 40vh;
+.donate-btn:hover { 
+  text-decoration: none; 
+  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+  background-color: #fff;
+  color: orange;
+  transition: all .3s ease-out;
 }
 
 .lending-nav ul {
@@ -166,39 +158,25 @@ body {
 .lending-nav ul li a {
   padding: 20px 10px;
   font-family: 'OpenSans', sans-serif;
+  font-weight: 300;
   font-size: 20px;
   color: #fff;
   margin: 0;
   text-decoration: none;
-}
-
-.lending-nav ul li.donate-btn a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  font-family: 'OpenSanc-Bold', sans-serif;  
-  text-align: center;
-  transition: 0.5s;
-}
-
-.lending-nav ul li.donate-btn:hover { 
-  text-decoration: none; 
-  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
-  background-color: #fff;
-  transition: 0.5s;
-}
-
-.lending-nav ul li.donate-btn:hover a { 
-  color: orange;
-  transition: 0.5s;
+  white-space: nowrap;
 }
 
 /* Что такое «Зелёный офис» */
 
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 .advantages {
   position: relative;
-  border: 2px solid transparent;
 }
 
 .fade1 {
@@ -221,7 +199,7 @@ body {
 .advantage-content h3 {
   text-align: center;
   font-size: 32px;
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;   
 }
 
@@ -296,8 +274,8 @@ body {
 
 .title-green {
   font-size: 44px;
-  font-family: 'OpenSans-Bold';
-  font-weight: 300; 
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700; 
   color: #7fb636;
   padding: 60px 20px 60px;
   margin: 0 auto;
@@ -311,7 +289,7 @@ body {
 .instruction h3 {
   text-align: center;
   font-size: 32px;
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700; 
   background-image: url("img/c3.png");
   background-size: cover;
@@ -353,7 +331,7 @@ body {
   min-height: 70px;
   font-size: 16px;
   color: #444;
-  font-family: 'OpenSans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -424,6 +402,9 @@ body {
   padding: 0 40px;
 }
 
+.team {
+  padding: 0 40px;
+}
 
 .person {
   min-height: 500px;
@@ -437,11 +418,14 @@ body {
 
 .person-photo {
   width: 100%;
+  min-height: 250px;
+  object-fit: cover;
 }
 
 .person-name {
   margin-left: 40px;
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 24px;
   color: #7fb636;
 }
@@ -465,10 +449,6 @@ body {
 
 /* Деятельность */
 
-
-.action .title-green {
-}
-
 .action-point {
   display: flex;
   justify-content: space-around;
@@ -488,12 +468,6 @@ video {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.air video,
-.water video,
-.nature video {
-  height: 270px;
-}
-
 .description {
   box-sizing: border-box;
   width: 49%;
@@ -504,7 +478,7 @@ video {
   margin: 0;
   text-align: left;
   font-size: 32px;
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;  
   color: #7fb636;
 }
@@ -515,7 +489,7 @@ video {
   margin: 0 0 0 20px;
   color: #444; 
   background-color: #fff;
-  font-family: 'OpenSans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300; 
   font-size: 24px;
 }
@@ -536,6 +510,7 @@ video {
 .description-text {
   font-size: 18px;
   color: #444;
+  text-align: justify;
 }
 
 .description-text strong {
@@ -607,7 +582,7 @@ video {
 
 .project-title {
   font-size: 32px;
-  font-family: 'OpenSans-Bold';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   margin: 0 auto 20px;
   text-align: center;
@@ -623,7 +598,7 @@ video {
 .project-text span {
   display: block;
   font-size: 32px;
-  font-family: 'OpenSans-Light';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   text-align: center;
   margin-bottom: 20px;
@@ -642,7 +617,8 @@ video {
 }
 
 .contact p {
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   margin-bottom: 60px;
   text-align: center;
@@ -660,7 +636,8 @@ video {
 }
 
 .main-form {
-  width: 50%;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -681,7 +658,7 @@ video {
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   line-height: 1.5;
 }
@@ -691,7 +668,7 @@ video {
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   line-height: 1.5;
 } 
@@ -701,7 +678,7 @@ video {
 .main-form textarea::-webkit-input-placeholder { 
   font-size: 16px; 
   color: #999;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   line-height: 1.5;
 }
@@ -735,7 +712,7 @@ video {
   color: #444;
   padding: 5px 15px;
   border: 1px solid #999;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   line-height: 1.5;
   resize: none;
@@ -748,7 +725,7 @@ video {
   padding: 5px 15px;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'OpenSanc-Bold', sans-serif;  
+  font-family: 'Open Sans', sans-serif; 
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -770,10 +747,11 @@ video {
 /* Footer */
 
 footer {
-  height: 60vh;
+  height: 240px;
   background-color: #261C11;
   background-image: url("img/footage-bg.jpg");
   background-size: cover;
+  background-position: center 30px;
   margin-bottom: 0;
   padding-bottom: 0;
   color: #fff;
@@ -789,6 +767,7 @@ footer {
 .footer-logo img,
 .copyright {
   width: 10vw;
+  min-width: 120px;
 }
 
 .footer-social {
@@ -818,7 +797,7 @@ footer {
   max-width: 800px;
   min-height: 100vh;
   color: #444;
-  z-index: 100;
+  z-index: 1;
   background-color: #fff;
   border-left: 2px solid #7fb636;
   box-shadow: -2px 0 5px 0 rgba(0,0,0,0.225);
@@ -838,12 +817,12 @@ footer {
 
 .donate-close-btn {
   position: absolute;
-  z-index: 1000;
+  z-index: 2;
   top: 0px;
   right: 0px;
   font-size: 20px;
   font-weight: 100;
-  font-family: 'OpenSanc-Light', sans-serif;  
+  font-family: 'Open Sans', sans-serif; 
   text-align: center;
   text-transform: uppercase;
   color: #999;
@@ -861,6 +840,7 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-right: 20px;
 }
 
 .donate-select {
@@ -869,7 +849,7 @@ footer {
   color: #444;
   padding: 5px 15px;
   border: 1px solid #999;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   line-height: 1.5;
   width: 80%;
@@ -923,7 +903,7 @@ footer {
   padding: 5px 15px;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'OpenSanc-Bold', sans-serif;  
+  font-family: 'Open Sans', sans-serif;  
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -935,12 +915,7 @@ footer {
   color: #FFF;
   background-color: #7fb636;
   margin-top: 25px;
-}
-
-.donate-btn:hover { 
-  text-decoration: none; 
-  box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
-  background-color: #8cc63f;
+  cursor: pointer;
 }
 
 /* Адаптивное меню */
@@ -1005,39 +980,77 @@ footer {
 }
 
 .main-nav.open ul {
+  background-color: #296600;
   opacity: 1;  
 }
 
-@media (max-width: 999px) {
-  
-  .menu-icon{
-    display: inline-block;
-  }
+/* Боковое меню */
 
-  .main-nav ul {
-    position: fixed;
-    display: block;
-    top: 13px;
-    right: 0;
-    left: 0;
-    margin-top: 52px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    opacity: 0;
-  }
+ol, ul {
+  list-style: none;
+}
 
-  .main-nav ul li {
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    color: #ffffff;
-  }
-  
+.pagination {
+  position:fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 18px;
+  z-index: 3;
+}
+
+.pagination a {
+  display:block;
+  height: 10px;
+  margin-bottom: 0px;
+  color: #444;
+  position: relative;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.pagination>li:nth-child(1)>a.active {
+  color: #fff;
+}
+
+.pagination a.active:after {
+  box-shadow: inset 0 0 0 8px #BEE38E;
+}
+
+.pagination a .hover-text {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  padding-right: 15px;
+}
+
+.pagination a:hover .hover-text {
+  opacity: 1;
+}
+
+.pagination a:after {
+  -webkit-transition:box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  width: 12px;
+  height: 12px;
+  display: block;
+  border: 2px solid #BEE38E;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 4px;
+  bottom: 0;
 }
 
 /* Анимация появления и исчезновения блока Хочу помочь */
 
-@-webkit-keyframes fadeInRight {
+@-webkit-keyframes fade-InRight {
   0% {
     opacity: 0;
     -webkit-transform: translateX(800px);
@@ -1051,7 +1064,7 @@ footer {
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fade-InRight {
   0% {
     opacity: 0;
     -webkit-transform: translateX(800px);
@@ -1067,7 +1080,7 @@ footer {
   }
 }
 
-@-webkit-keyframes fadeOutRight {
+@-webkit-keyframes fade-OutRight {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0px);
@@ -1081,7 +1094,7 @@ footer {
   }
 }
 
-@keyframes fadeOutRight {
+@keyframes fade-OutRight {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0px);
@@ -1097,3 +1110,451 @@ footer {
   }
 }
 
+
+@media(max-width: 1200px) {
+  
+  /*  Деятельность */
+  
+  .action-point.air,
+  .action-point.animals,
+  .action-point.nature {
+    flex-direction: column-reverse;
+  }
+  
+  .action-point.tree,
+  .action-point.water {
+    flex-direction: column;
+  }
+  
+  .action-point {
+    margin-bottom: 20px;
+  }
+  
+  video {
+    height: 80%;
+    margin: 25px 40px;
+    width: calc(80% - 80px);
+    padding: 0px;
+  }
+
+  .description {
+    width: 80%;
+  }
+  
+  .description h4 {
+    margin-bottom: 25px;
+  }
+  
+  .action-point.nature {
+    margin-bottom: 180px;
+  }
+  
+  
+}
+
+@media(max-width: 1100px) {
+  
+  /* Как сделать офис зелёным */
+
+  .instruction-text {
+    width: 260px;
+    min-height: 80px;
+    font-size: 16px;
+  }
+
+  .instruction-text1 {
+    top: 0px;
+    left: calc(50vw - 520px);
+  }
+
+  .instruction-text2 {
+    top: 260px;
+    left: calc(50vw - 520px);
+  }
+
+  .instruction-text3 {
+    top: 0px;
+    left: calc(50vw + 135px);
+  }
+
+  .instruction-text4 {
+    top: 260px;
+    left: calc(50vw + 135px);
+  }
+
+
+  .instruction-text1:before {
+    left: 290px;
+    top: 35px;
+    transform-origin: 0 0;
+    transform: rotate(30deg);
+  }
+
+  .instruction-text2:before {
+    left: 290px;
+    top: 25px;
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text3:before {
+    left: -70px;
+    top: 35px;
+    transform-origin: right 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text4:before {
+    left: -70px;
+    top: 25px;
+    transform-origin: right 0;
+    transform: rotate(30deg);
+  }
+}
+
+@media(max-width: 1024px) {
+  
+  /*  Деятельность */
+  .action-point {    
+    padding: 0px;
+  }
+  
+  /* Как сделать офис зелёным */
+
+  .instruction-text {
+    width: 220px;
+    min-height: 100px;
+    font-size: 16px;
+  }
+
+  .instruction-text1 {
+    top: 0px;
+    left: calc(50vw - 480px);
+  }
+
+  .instruction-text2 {
+    top: 260px;
+    left: calc(50vw - 480px);
+  }
+
+  .instruction-text3 {
+    top: 0px;
+    left: calc(50vw + 135px);
+  }
+
+  .instruction-text4 {
+    top: 260px;
+    left: calc(50vw + 135px);
+  }
+
+
+  .instruction-text1:before {
+    left: 250px;
+    top: 35px;
+    transform-origin: 0 0;
+    transform: rotate(30deg);
+  }
+
+  .instruction-text2:before {
+    left: 250px;
+    top: 25px;
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text3:before {
+    left: -70px;
+    top: 35px;
+    transform-origin: right 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text4:before {
+    left: -70px;
+    top: 25px;
+    transform-origin: right 0;
+    transform: rotate(30deg);
+  }
+}
+
+@media(max-width: 968px) {
+  /* Как сделать офис зелёным */
+
+  .instruction-text {
+    width: 200px;
+    min-height: 120px;
+    font-size: 16px;
+  }
+
+  .instruction-text1 {
+    top: 0px;
+    left: calc(50vw - 440px);
+  }
+
+  .instruction-text2 {
+    top: 240px;
+    left: calc(50vw - 440px);
+  }
+
+  .instruction-text3 {
+    top: 0px;
+    left: calc(50vw + 115px);
+  }
+
+  .instruction-text4 {
+    top: 240px;
+    left: calc(50vw + 115px);
+  }
+
+
+  .instruction-text1:before {
+    left: 240px;
+    top: 35px;
+    transform-origin: 0 0;
+    transform: rotate(30deg);
+  }
+
+  .instruction-text2:before {
+    left: 240px;
+    top: 65px;
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text3:before {
+    left: -80px;
+    top: 35px;
+    transform-origin: right 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text4:before {
+    left: -80px;
+    top: 65px;
+    transform-origin: right 0;
+    transform: rotate(30deg);
+  }
+}
+
+@media(max-width: 868px) {
+  /* Как сделать офис зелёным */
+  
+  .fade2 div img {
+    margin: auto;
+    width: 360px;
+    height: 360px;
+    position: relative;
+    margin-bottom: 80px;
+    margin-top: 100px;
+  }
+
+  .instruction-text {
+    width: calc(50vw - 80px);
+    min-height: 120px;
+    font-size: 16px;
+  }
+
+  .instruction-text1 {
+    top: -60px;
+    left: 0px;
+  }
+
+  .instruction-text2 {
+    top: 300px;
+    left: 0px;
+  }
+
+  .instruction-text3 {
+    top: -60px;
+    left: calc(50vw - 40px);
+  }
+
+  .instruction-text4 {
+    top: 300px;
+    left: calc(50vw - 40px);
+  }
+
+
+  .instruction-text1:before {
+    left: 100px;
+    top: 115px;
+    transform-origin: 0 0;
+    transform: rotate(30deg);
+  }
+
+  .instruction-text2:before {
+    left: 100px;
+    top: -5px;
+    transform-origin: 0 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text3:before {
+    left: 120px;
+    top: 115px;
+    transform-origin: right 0;
+    transform: rotate(-30deg);
+  }
+
+  .instruction-text4:before {
+    left: 120px;
+    top: -5px;
+    transform-origin: right 0;
+    transform: rotate(30deg);
+  }
+  
+  .fade2 .slick-dots li
+  {
+    margin: 0;
+  }
+  
+  .title-green,
+  h3.instruction-title p,
+  .instruction h3 p {
+    font-size: 32px;
+  }
+  
+  .main-title h1 {    
+    font-size: 80px;
+  }
+
+  .main-title h2 {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 768px) {
+
+}
+
+@media(max-width: 698px) {
+  
+  /* Адаптивное меню */
+  .menu-icon{
+    display: inline-block;
+  }
+
+  .main-nav ul {
+    position: fixed;
+    display: block;
+    top: 13px;
+    right: 0;
+    left: 0;
+    margin-top: 52px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .main-nav ul li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Что такое «Зелёный офис» */  
+  .fade1 .slick-dots li
+
+  {  
+    width: 100px;
+  }
+  
+  .fade1 .slick-dots li button
+
+  {  
+    width: 100px;    
+  }
+  
+  .fade1 .slick-dots li button:before
+  {    
+    width: 100px;
+  }
+  
+  .fade1 .slick-dots li:nth-child(2).slick-active button:before
+  {
+    content: "";
+    background: url("img/svg/downarrow.svg") no-repeat 33px 20px / 34px, url("img/c1.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .fade1 .slick-dots li:nth-child(3).slick-active button:before
+  {
+    background: url("img/svg/downarrow.svg") no-repeat 33px 20px / 34px, url("img/c2.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .fade1 .slick-dots li:nth-child(4).slick-active button:before
+  {
+    background: url("img/svg/downarrow.svg") no-repeat 33px 20px / 34px, url("img/c3.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .fade1 .slick-dots li:nth-child(5).slick-active button:before
+  {
+    background: url("img/svg/downarrow.svg") no-repeat 33px 20px / 34px, url("img/c4.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+  
+  .fade1 .slick-dots li:nth-child(2) button:before
+  {
+    content: "click me";
+    font-size: 14px;
+    font-family: 'OpenSans';
+    text-align: center;
+    color: #444;
+    opacity: 1;
+    background: url("img/svg/plus.svg") no-repeat 38px 20px / 24px, url("img/c1.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .noclick:before
+  {
+    content: "" !important;
+    font-size: 0px;
+  }
+
+  #slick-slide-control11:visited::before {
+    content: "";
+  }
+
+  .fade1 .slick-dots li:nth-child(3) button:before
+  {
+    opacity: 1;
+    background: url("img/svg/plus.svg") no-repeat 38px 20px / 24px, url("img/c2.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .fade1 .slick-dots li:nth-child(4) button:before
+  {
+    opacity: 1;
+    background: url("img/svg/plus.svg") no-repeat 38px 20px / 24px, url("img/c3.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+  .fade1 .slick-dots li:nth-child(5) button:before
+  {
+    opacity: 1;
+    background: url("img/svg/plus.svg") no-repeat 38px 20px / 24px, url("img/c4.png") no-repeat 0px 60px / auto;
+    border: none;
+  }
+
+
+}
+
+@media(max-width: 640px) {
+  
+  
+}
+
+@media(max-width: 570px) {
+
+}
+
+@media(max-width: 360px) {
+
+}
+
+@media(max-width: 320px) {
+
+}

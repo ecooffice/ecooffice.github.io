@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>ecooffice</title>
   <link rel="shortcut icon" href="globe.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css">
-  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/slick-theme.css">  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
+
+ <header>   
  
-   <div class="full-page section">
+   <section class="full-page panel home" data-section-name="Главная">
+   
    <!-- Главная навигация -->
 
    <div class="top-line">
@@ -37,34 +39,37 @@
 
    <!-- Фоновое видео -->
    <div class="video-container">     
-     <!-- <video src="video/bg.mp4" class="bg-video" autoplay preload="auto" loop></video> -->  
+     <!-- <video src="video/bg.mp4" class="bg-video" autoplay preload="auto" loop></video> -->
 <div class="video-overlay"></div>          
    </div>
      <div class="main-title">
-       <h1>Экоофис</h1>
-       <h2>мы знаем как сделать ваш офис зелёным</h2>   
-       <button class="donate-btn donate-btn-center">Хочу помочь</button>                  
+       <div class="main-title-container">
+         <h1>Экоофис</h1>
+         <h2>мы знаем как сделать ваш офис зелёным</h2>   
+         <button class="donate-btn">Хочу помочь</button>
+       </div>                  
      </div>     
    <!-- Навигация по лендингу -->
    <div class="lending-nav" id="menu">
      <ul>
-       <li><a href="#about">О проекте</a></li>
-       <li><a href="#how">Как начать</a></li>
-       <li><a href="#team">Команда</a></li>
-       <li><a href="#action">Деятельность</a></li>
-       <li><a href="#results">Результаты</a></li>
-       <li><a href="#contacts">Контакты</a></li>       
+       <li><a href="#О&nbsp;проекте">О проекте</a></li>
+       <li><a href="#Как&nbsp;начать">Как начать</a></li>
+       <li><a href="#Команда">Команда</a></li>
+       <li><a href="#Деятельность">Деятельность</a></li>
+       <li><a href="#Результаты">Результаты</a></li>
+       <li><a href="#Контакты">Контакты</a></li>       
      </ul>     
    </div>
-   </div> <!-- full-page -->
+     </section> <!-- full-page -->
    
  </header>
+ 
  <main class="main-content">
  
    <!-- Что такое «Зелёный офис»   -->
-   <div class="full-page section" id="about">
-    <div class="earth"></div>
-     
+   <section class="full-page panel" data-section-name="О&nbsp;проекте">
+   
+    <div class="earth"></div>     
      <h2 class="title-green">Зелёный офис это...</h2>
      <div class="advantages">
        <div class="fade1">
@@ -106,14 +111,14 @@
 
        </div> <!-- fade1 -->
      </div>
-   </div>
+   </section>
    
      
    <!-- Семь шагов к зелёному офису -->
-   <div class="full-page section" id="how">     
+   <section class="full-page panel" data-section-name="Как&nbsp;начать">     
      <div class="fade2">
      
-       <div class="instruction">
+  <div class="instruction">
          <div class="instruction-envelope">
            <h3 class="instruction-title"><p>Как сделать офис зелёным</p></h3>
            <div class="instruction-container"> 
@@ -215,107 +220,107 @@
        </div>
        
      </div>     
-   </div> <!-- full-page -->
+   </section> <!-- full-page -->
   
    <!-- Команда -->
    
-   <div class="full-page section" id="team">
-     <h2 class="title-green">Кто мы</h2>
-     <div class="multiple-items">   
-             
-       <div class="person">
-         <img src="img/person3.jpg" alt="" class="person-photo">
-         <p class="person-name">Николай</p>
-         <blockquote>Каждый из нас может сделать мир немного лучше, чище, позитивней. От этого выиграем все мы.</blockquote>
-         <div class="person-social">
-           <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+   <section class="full-page panel" data-section-name="Команда">
+     <div class="team">
+       <h2 class="title-green">Кто мы</h2>
+       <div class="multiple-items">
+         <div class="person">
+           <img src="img/person3.jpg" alt="" class="person-photo">
+           <p class="person-name">Николай</p>
+           <blockquote>Каждый из нас может сделать мир немного лучше, чище, позитивней. От этого выиграем все мы.</blockquote>
+           <div class="person-social">
+             <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+           </div>
          </div>
-       </div>
-       
-       <div class="person">
-         <img src="img/person1.jpg" alt="" class="person-photo">
-         <p class="person-name">Ольга</p>
-         <blockquote>Я работаю с животными и понимаю насколько для них важна чистая и безопасная окружающая среда.</blockquote>
-         <div class="person-social">           
-           <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+
+         <div class="person">
+           <img src="img/person1.jpg" alt="" class="person-photo">
+           <p class="person-name">Ольга</p>
+           <blockquote>Я работаю с животными и понимаю насколько для них важна чистая и безопасная окружающая среда.</blockquote>
+           <div class="person-social">           
+             <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+           </div>
          </div>
-       </div>
-       
-       <div class="person">
-         <img src="img/person2.jpg" alt="" class="person-photo">
-         <p class="person-name">Антонина</p>
-         <blockquote>Мне удаётся совмещать работу, хобби и увлечение.  Я уверена, что занимаюсь важным, полезным для всех делом.</blockquote>
-         <div class="person-social">
-           <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
-         </div>
-       </div>   
-            
-       <div class="person">
-         <img src="img/person4.jpg" alt="" class="person-photo">
-         <p class="person-name">Марина</p>
-         <blockquote>Я мама. Мои дети - самое главное для меня. Заботясь о сохранении природы, я одновременно забочусь и о своих малышах.</blockquote>
-         <div class="person-social">
-           <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
-         </div>
-       </div>    
-             
-       <div class="person">
-         <img src="img/person5.jpg" alt="" class="person-photo">
-         <p class="person-name">Светлана</p>
-         <blockquote>Я счастлива потому что занимаюсь любимой работой. Охранять природу жизненно важно для каждого из нас. Присоединяйтесь.
-         </blockquote>
-         <div class="person-social">
-           <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
-           <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+
+         <div class="person">
+           <img src="img/person2.jpg" alt="" class="person-photo">
+           <p class="person-name">Антонина</p>
+           <blockquote>Мне удаётся совмещать работу, хобби и увлечение.  Я уверена, что занимаюсь важным, полезным для всех делом.</blockquote>
+           <div class="person-social">
+             <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+           </div>
+         </div>   
+
+         <div class="person">
+           <img src="img/person4.jpg" alt="" class="person-photo">
+           <p class="person-name">Марина</p>
+           <blockquote>Я мама. Мои дети - самое главное для меня. Заботясь о сохранении природы, я одновременно забочусь и о своих малышах.</blockquote>
+           <div class="person-social">
+             <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+           </div>
+         </div>    
+
+         <div class="person">
+           <img src="img/person5.jpg" alt="" class="person-photo">
+           <p class="person-name">Светлана</p>
+           <blockquote>Я счастлива потому что занимаюсь любимой работой. Охранять природу жизненно важно для каждого из нас. Присоединяйтесь.
+           </blockquote>
+           <div class="person-social">
+             <a href="#"><i class="fa fa-vk social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-facebook social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-twitter social-icons" aria-hidden="true"></i></a>
+           </div>
          </div>
        </div>
      </div>
-   </div> <!-- full-page -->
+   </section> <!-- full-page -->
    
    <!-- Деятельность -->
    
-   <div class="action partsection" id="action">
+   <section class="action panel" data-section-name="Деятельность">
      <h2 class="title-green">Чем мы занимаемся</h2>
      
      <div class="action-point air">
-       <video src="video/air1.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>      
-       
-       <div class="description wow fadeInRight">
+       <video src="video/air1.mp4" class="action-video" autoplay preload="auto" loop></video>  
+       <div class="description">
          <h3>Раздельный сбор мусора</h3>
          <h4 class="action-title">Заботимся о чистоте воздуха</h4>
          <p class="description-text">Раздельный сбор мусора — это экономия сырья и ресурсов. А ещё это забота об экологии. На каждую тонну сжигаемых отходов требуется 5–6 тысяч кубических метров воздуха. Поэтому раздельный сбор мусора это чистый, не отравленный мусоросжигательными заводами воздух. Воздух, в котором будут летать птицы. Воздух, которым будут дышать наши дети.</p>
        </div>
      </div>
-   </div> <!-- action -->    
+      
    
-   <div class="action-point tree partsection">
-       <div class="description wow fadeInLeft">
+   <div class="action-point tree">
+       <div class="description">
          <h3>Cобираем макулатуру</h3>
          <h4 class="action-title">Сохраняем деревья</h4>
          <p class="description-text">Небольшой офис, в котором работает 10 человек, за год вырабатывает не менее тонны бумажных отходов. Сдав их на переработку вы сохраните 10-15 деревьев, сэкономите 20 000 литров запасов воды и 1000 кВт электроэнергии, сможете уменьшить опасные для природной среды выбросы СО<sub>2</sub> на 1700 кг.</p>
        </div>
 
-       <video src="video/forest2.mp4" class="action-video wow fadeInRight" autoplay preload="auto" loop></video>       
+       <video src="video/forest2.mp4" class="action-video" autoplay preload="auto" loop></video>       
      </div>
      
-   <div class="action-point animals partsection">
-       <video src="video/animal4.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>      
+   <div class="action-point animals">
+       <video src="video/animal4.mp4" class="action-video" autoplay preload="auto" loop></video>      
        
-       <div class="description wow fadeInRight">
+       <div class="description">
          <h3>Cобираем батарейки</h3>
          <h4 class="action-title">Спасаем зверей и птиц</h4>
          <p class="description-text">Пальчиковые батарейки, аккумуляторы, офисная техника относятся к категории опасных отходов. Их нельзя выбрасывать вместе с остальным мусором. Всего одна батарейка может загрязнить 20 м<sup>2</sup> земли. Это территория обитания двух деревьев, двух кротов и одного ежа. Тяжелые металы, которые содержатся в батарейках, приносят вред здоровью всех живых существ, в том числе и человека. 
@@ -323,33 +328,33 @@
        </div>
      </div>
      
-   <div class="action-point water partsection">
-       <div class="description wow fadeInLeft">
+   <div class="action-point water">
+       <div class="description">
          <h3>Собираем пластик</h3>
          <h4 class="action-title">Сберегаем воду и почву</h4>
          <p class="description-text">Считается, что время разложения пластмасс в природе составляет около 200 лет. Но это только предположение: ещё ни одно из созданных человеком изделий из пластика не разложилось в природе. Собирая и отправляя на переработку пластик мы не допускаем его попадания в природу. Благодаря этому пластиковые отходы принесут пользу, станут основой нужных и полезных вещей, вместо того, чтобы загрязнять землю и водоёмы</p>
        </div>
        
-       <video src="video/water2.mp4" class="action-video wow fadeInRight" autoplay preload="auto" loop></video>       
+       <video src="video/water2.mp4" class="action-video" autoplay preload="auto" loop></video>       
      </div>
      
-   <div class="action-point nature partsection">
-       <video src="video/daisy.mp4" class="action-video wow fadeInLeft" autoplay preload="auto" loop></video>       
+   <div class="action-point nature">
+       <video src="video/daisy.mp4" class="action-video" autoplay preload="auto" loop></video>       
        
-       <div class="description wow fadeInRight">
+       <div class="description">
          <h3>Экологические мероприятия</h3>
          <h4 class="action-title">Охраняем природу</h4>
          <p class="description-text"> Мы организовываем и проводим лекции, семинары, экологические мероприятия, осуществляем экологический аудит компаний, предоставляем практические рекомендации каким образом зелёный офис может сократить потребление воды, энергии, других ресурсов. Уменьшая количество отходов, осуществляя раздельный сбор мусора, отправляя на переработку макулатуру, зелёный офис не только экономит компании средства, но ещё и сохраняет чистыми воздух и воду, заботится о животных, сберегает здоровье человека.</p>
        </div>       
      </div>  
-   
+   </section> <!-- action --> 
    
    
    <!-- Результаты -->
-   <div class="results partsection" id="results"> 
+   <section class="results panel" data-section-name="Результаты"> 
    <h2 class="title-green">Результаты</h2>
      <div class="project air">
-       <div class="project-video wow fadeInUp">
+       <div class="project-video">
          <video src="video/air.mp4" autoplay preload="auto" loop></video>
        </div>
        
@@ -369,8 +374,8 @@
          </p>
        </div>
      </div> <!-- air -->
-   </div>   <!-- results -->
-     <div class="project tree partsection">
+   
+     <div class="project tree">
        <div class="project-content">
          <h3 class="project-title">Сбор макулатуры</h3>
          <p class="project-text">
@@ -385,13 +390,13 @@
          <div class="project-line">
          </div>
        </div>
-       <div class="project-video wow fadeInUp">
+       <div class="project-video">
          <video src="video/treeleaves.mp4" autoplay preload="auto" loop></video>
        </div>       
      </div> <!-- tree -->
      
-     <div class="project water partsection">
-       <div class="project-video wow fadeInUp">
+     <div class="project water">
+       <div class="project-video">
          <video src="video/water3.mp4" autoplay preload="auto" loop></video>
        </div>
 
@@ -411,7 +416,7 @@
        </div>
      </div> <!-- water -->
 
-     <div class="project ground partsection">
+     <div class="project ground">
        <div class="project-content">
          <h3 class="project-title">Сбор и переработка батареек</h3>
          <p class="project-text">
@@ -426,13 +431,13 @@
          <div class="project-line">
          </div>
        </div>
-       <div class="project-video wow fadeInUp">
+       <div class="project-video">
          <video src="video/animal1.mp4" autoplay preload="auto" loop></video>
        </div>       
      </div> <!-- ground -->
      
-     <div class="project energy partsection">
-       <div class="project-video wow fadeInUp">
+     <div class="project energy">
+       <div class="project-video">
          <video src="video/windturbine.mp4" autoplay preload="auto" loop></video>
        </div>
 
@@ -464,9 +469,10 @@
        <div class="project-content">
        </div>      
      </div> <!-- end -->
+   </section>   <!-- results -->
         
    <!-- Контакты -->
-   <div class="contacts full-page section" id="contacts">
+   <section class="contacts full-page panel" data-section-name="Контакты">
      <h2 class="title-green">Контакты</h2>
      <div class="contact">
        <p>По всем вопросам пишите нам на e-mail mail@mail или заполните форму ниже</p>
@@ -483,7 +489,7 @@
          <input name="" class="send-btn" value="Отправить" placeholder="" type="submit">
        </form>
      </div>
-   </div>
+   </section>
  </main> 
   
   <footer class="footer partsection">
@@ -541,10 +547,9 @@
        </form>
   </div>
   
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>  
   <script src="js/jquery.scrollify.js"></script>
-  <script src="js/slick.js"></script>
-  <script src="js/wow.min.js"></script>
+  <script src="js/slick.js"></script>  
   <script src="script.js"></script>
   </body>
 </html>
@@ -557,4 +562,4 @@ light  #BEE38E;
 contrast #E08326;
 -->
 
-
+<!-- 768х1024;  320x570;  360х640 -->
