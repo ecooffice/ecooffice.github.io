@@ -203,7 +203,7 @@ body {
   font-weight: 700;   
 }
 
-.advantage-content h3 span {
+.advantage-content h3 p {
   color: #000;
   background: #fff;
   mix-blend-mode: lighten;
