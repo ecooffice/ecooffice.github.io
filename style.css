@@ -239,6 +239,10 @@ body {
   background-size: cover;
 }
 
+.advantage2 {
+  border-top: 1px solid red;   
+}
+
 .advantage3 {
   border-top: 1px solid green;  
 }
